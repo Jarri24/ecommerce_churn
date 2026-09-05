@@ -20,7 +20,15 @@ La retención de clientes es uno de los pilares de rentabilidad en cualquier e-c
 3. **Feature Engineering:** Transformación de variables categóricas a numéricas mediante *One-Hot Encoding*.
 4. **Modelado:** Entrenamiento de un algoritmo `RandomForestClassifier` (100 estimadores) separando los datos en 80% entrenamiento y 20% prueba.
 
-## 4) Cómo ejecutar este proyecto localmente
+## 4) Insights de Negocio (Feature Importance)
+Tras analizar el modelo Random Forest, pudimos extraer los factores clave que determinan la fuga de clientes. Esto permite pasar de una predicción ciega a una estrategia comercial accionable:
+1. **Antigüedad (`Tenure` - 1st Driver):** El tiempo que el usuario lleva en la plataforma es el predictor más fuerte. Los nuevos usuarios son los que presentan mayor riesgo de abandono; si no se les engancha a tiempo, se van.
+2. **Incentivos Económicos (`CashbackAmount`):** La estructura de devoluciones y beneficios económicos juega un papel crucial en la decisión de permanencia.
+3. **Logística (`WarehouseToHome`):** La distancia y eficiencia de entrega influyen directamente en la satisfacción y retención a largo plazo.
+
+![Feature Importance](reports/feature_importance.png)
+
+## 5) Cómo ejecutar este proyecto localmente
 1. Clona este repositorio:
    ```bash
    git clone [https://github.com/Jarri24/ecommerce_churn.git](https://github.com/TU-USUARIO/ecommerce_churn.git)
